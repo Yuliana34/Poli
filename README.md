@@ -21,13 +21,28 @@ Formulario de contacto donde el usuario puede:
 - Ingresar su nombre, apellido, correo y mensaje.
 - Visualizar la ubicación del negocio a través de un mapa ilustrativo.
 
-## 🚀 Tecnologías utilizadas
-- HTML5
-- CSS3
-- JavaScript (si se implementa interacción)
-- Herramientas de diseño (Figma, Canva, etc.) — opcional
+## 🛠️ Tecnologías utilizadas
+
+- ⚙️ **Python 3.10+**
+- 🌐 **Django 4.x**
+- 🖼️ HTML5
+- 🎨 CSS3
+- 🧠 Plantillas Django (Template Engine)
+- 🗃️ SQLite3 (base de datos por defecto)
 ## 🛠️ Instalación y uso
 
 1. Clona este repositorio:
    ```bash
    https://github.com/Yuliana34/Poli/tree/master/proyect
+2. Crear y activar un entorno virtual
+   python -m venv env
+   source env/bin/activate
+   
+4. Intala las dependencias
+   pip install -r requirements.txt
+   
+6. Inicia en servidor
+   python manage.py runserver
+   
+8. Accede desde el navegador
+   http://127.0.0.1:8000
