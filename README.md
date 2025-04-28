@@ -29,6 +29,11 @@ Formulario de contacto donde el usuario puede:
 - 🎨 CSS3
 - 🧠 Plantillas Django (Template Engine)
 - 🗃️ SQLite3 (base de datos por defecto)
+## Actores
+- Yuliana Montenegro Chiquito
+- Juan Esteban Martínez Zapata
+- Paula Milena Cagua Gutiérrez
+
 ## 🛠️ Instalación y uso
 
 1. Clona este repositorio:
