@@ -21,20 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-##PARA DESPLIEGUE################################################
-SECRET_KEY = os.environ.get('SECRET_KEY', default='4r7fg384gf49f43fh934g9bc9wg43')
+SECRET_KEY = 'django-insecure-eg+a6^w7vqa(vb_*w$s_55jmtbntf@h2t#6=ghe*7^z+84ck$s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-##PARA DESPLIEGUE
-DEBUG = 'RENDER' not in os.environ 
+DEBUG = True
 
-ALLOWED_HOSTS = [] #host agregado 
-##PARADESPLIEGUE
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+ALLOWED_HOSTS = ['127.0.0.1'] #host agregado 
 
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-#############################################################
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'admi',
+    'admi.apps.AdmiConfig',
     'bootstrap4',
 ]
 
@@ -53,9 +47,6 @@ SITE_ID = 1 #Agredado
 X_FRAME_OPTIONS='SAMEORIGIN' #Agregado
 
 MIDDLEWARE = [
-    ##PARADESPKIEGUE
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    ##
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -136,11 +127,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-##despliegue
-if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-#####################################################
 STATICFILES_DIRS = [
     BASE_DIR /'static',
 ] #Agregado
